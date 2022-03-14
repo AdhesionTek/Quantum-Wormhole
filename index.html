@@ -50,20 +50,15 @@
 </head>
 
 <body>
-
-<center>
+<div style="text-align: center;">
     <nav>
         <div class="nav-wrapper blue-grey large ">
             <a href="#" class="nav-content " style="font-size: 20pt;">Quantum Wormhole</a>
         </div>
     </nav>
-    <div class="card-panel outer-limit z-depth-3 top-margin" style="align-self: center;">
+    <div class="card-panel outer-limit z-depth-3 top-margin" style="margin:auto;">
             <span max-width="200px">
-                <p>
-                    <canvas class="z-depth-2 canvas-size"></canvas>
-                </p>
-                    
-                <p>
+                    <canvas class="z-depth-2 canvas-size" onclick="canvasOnClick()"></canvas>
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="nameInput" type="text" class="validate">
@@ -74,15 +69,10 @@
                         <label for="birthdayInput">Birthday</label>
                     </div>
                 </div>
-                </p>
-                <p>
                     <a class="waves-effect waves-light btn-large" onclick="paintCanvas()">Get</a>
-                </p>
             </span>
     </div>
-</center>
-
-
+</div>
 <script type="text/javascript" src="canvas.js"></script>
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>

@@ -1,30 +1,24 @@
-// Get Canvas
-
+// Get Canvas and inputs
 const canvas = document.querySelector("canvas");
-
 const context2d = canvas.getContext("2d");
+const nameInput = document.getElementById("nameInput");
+const birthInput = document.getElementById("birthdayInput");
 
-
-var seed = 1;
+let seed = 1;
+let generated = 0;
 
 /**
- * Paint the canvas using name and birth day as input.
+ * Paint the canvas using name and birthday as input.
  */
 function paintCanvas() {
 
-    let nameInput = document.getElementById("nameInput");
-    var birthInput = document.getElementById("birthdayInput");
-
-    //console.log(birthInput.valueAsNumber);
-
     if (!nameInput.value || !birthInput.value) {
-        alert("Input is not vaild.");
+        alert("Input is not valid.");
         return;
     }
 
-
-    height = canvas.height;
-    width = canvas.width;
+    let height = canvas.height;
+    let width = canvas.width;
 
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
@@ -48,6 +42,7 @@ function paintCanvas() {
         context2d.stroke();
     }
     seed = 1;
+    generated = 1;
 }
 
 /**
@@ -56,7 +51,7 @@ function paintCanvas() {
  * @returns {number}
  */
 function getHash(input) {
-    var hash = 0, i, chr;
+    let hash = 0, i, chr;
     if (input.length === 0) return hash;
     for (i = 0; i < input.length; i++) {
         chr = input.charCodeAt(i);
@@ -64,7 +59,7 @@ function getHash(input) {
         hash |= 0; // Convert to 32bit integer
     }
     return hash;
-};
+}
 
 /**
  * Get a random int
@@ -77,6 +72,17 @@ function getRandomInt(max) {
 
 
 function random() {
-    var x = Math.sin(seed++) * 10000;
+    let x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
+}
+
+function canvasOnClick() {
+    if (generated === 1) {
+        console.log("Hello");
+        let sound = new Audio("Audio/a" + getRandomInt(4) + ".wav");
+        sound.play().then(r => {
+            sound.currentTime = 0
+        });
+
+    }
 }
