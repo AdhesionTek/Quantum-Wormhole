@@ -1,7 +1,6 @@
-# Quantum-Wormhole
-Quantum Wormhole by AdhesionTek
-
-It is an open sourse impelementation of [Ocean Peace Quantum Wormhole](https://en.oceanpeace.com.cn/static/product-detail.html) with added features including 热水器.
+# Quantum Wormhole
+## Quantum Wormhole by AdhesionTek
+An free open sourse impelementation of [Ocean Peace Quantum Wormhole](https://en.oceanpeace.com.cn/static/product-detail.html) with added features including 热水器.
 
 ## Try it now!
 Link: http://quantumwormhole.adhesiontek.com/
