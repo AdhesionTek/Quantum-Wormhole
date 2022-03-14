@@ -1,4 +1,4 @@
-# Quantum Wormhole
+# AdhesionTek Quantum Wormhole (ATQW)
 ## What is this?
 Quantum Wormhole by AdhesionTek is an free open sourse impelementation of [Ocean Peace Quantum Wormhole](https://en.oceanpeace.com.cn/static/product-detail.html) with added features including 热水器.
 
