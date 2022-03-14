@@ -5,4 +5,4 @@ Quantum Wormhole by AdhesionTek
 Link: http://quantumwormhole.adhesiontek.com/
 
 ## Wanna learn more?
-Cheak out our [Wiki](https://github.com/AdhesionTek/Quantum-Wormhole/wiki)!
+Cheak out our [wiki](https://github.com/AdhesionTek/Quantum-Wormhole/wiki).
