@@ -5,7 +5,7 @@
 
 <p align="center">
 
-<img src="https://img.shields.io/github/license/AdhesionTek/Quantum-Wormhole?style=for-the-badge" alt="license badge">
+<img src="https://img.shields.io/badge/License-WTFPL-brightgreen.svg?style=for-the-badge" alt="license badge">
 <img src="https://img.shields.io/github/issues/AdhesionTek/Quantum-Wormhole?style=for-the-badge" alt="issues badge"> 
 <img src="https://img.shields.io/github/stars/AdhesionTek/Quantum-Wormhole?style=for-the-badge" alt="stars badge"> 
 <img src="https://img.shields.io/github/forks/AdhesionTek/Quantum-Wormhole?style=for-the-badge" alt="forks badge"> 
