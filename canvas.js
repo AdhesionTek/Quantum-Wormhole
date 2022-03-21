@@ -79,7 +79,7 @@ function random() {
 function canvasOnClick() {
     if (generated === 1) {
         console.log("Hello");
-        let sound = new Audio("Audio/a" + getRandomInt(3) + ".wav");
+        let sound = new Audio("audio/a" + getRandomInt(3) + ".wav");
         sound.play().then(r => {
             sound.currentTime = 0
         });
