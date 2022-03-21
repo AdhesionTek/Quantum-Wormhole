@@ -1,3 +1,8 @@
+/**
+ * This js file controls the canvas.
+ * @type {HTMLCanvasElement}
+ */
+
 // Get Canvas and inputs
 const canvas = document.querySelector("canvas");
 const context2d = canvas.getContext("2d");
@@ -35,10 +40,7 @@ function paintCanvas() {
             ${Math.floor(255 * i / curveNumber)})`;
         context2d.beginPath();
         context2d.moveTo(getRandomInt(width), getRandomInt(height));
-        context2d.bezierCurveTo(
-            width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50,
-            width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50,
-            getRandomInt(width), getRandomInt(height));
+        context2d.bezierCurveTo(width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50, width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50, getRandomInt(width), getRandomInt(height));
         context2d.stroke();
     }
     seed = 1;
@@ -78,11 +80,9 @@ function random() {
 
 function canvasOnClick() {
     if (generated === 1) {
-        console.log("Hello");
         let sound = new Audio("audio/a" + getRandomInt(3) + ".wav");
         sound.play().then(r => {
             sound.currentTime = 0
         });
-
     }
 }
