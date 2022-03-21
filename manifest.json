@@ -1,9 +1,9 @@
 {
-  "name": "粘连科技量子虫洞",
+  "name": "量子虫洞",
   "short_name": "量子虫洞",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#FFFFFF",
+  "background_color": "#BDBDBD",
   "theme_color": "#546E7A",
   "orientation": "portrait-primary",
   "icons": [
