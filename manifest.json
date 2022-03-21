@@ -1,17 +1,30 @@
 {
   "name": "量子虫洞",
   "short_name": "量子虫洞",
-  "start_url": "index.html",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#BDBDBD",
   "theme_color": "#546E7A",
+  "description": "免费，自由，高效的量子虫洞",
   "orientation": "portrait-primary",
   "icons": [
     {
       "src": "https://media.githubusercontent.com/media/Danmaku-Big-Big-War/Danmaku-Big-Big-War/main/GitHubFiles/GameIcon.png",
       "type": "image/png",
       "sizes": "2048x2048",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon_x192",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon_x512",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ]
 }
