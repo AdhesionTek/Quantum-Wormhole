@@ -3,8 +3,8 @@
     "short_name": "量子虫洞",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#5c5c5c",
-    "theme_color": "#5c5c5c",
+    "background_color": "#546E7A",
+    "theme_color": "#546E7A",
     "orientation": "portrait-primary",
     "icons": [
       {
