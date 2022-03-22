@@ -3,7 +3,7 @@
   "short_name": "量子虫洞",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#BDBDBD",
+  "background_color": "#546E7A",
   "theme_color": "#546E7A",
   "description": "免费，自由，高效的量子虫洞",
   "orientation": "portrait-primary",
