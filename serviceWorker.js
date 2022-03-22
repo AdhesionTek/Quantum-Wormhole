@@ -9,7 +9,10 @@ const assets = [
     "/audio/a0.wav",
     "/audio/a1.wav",
     "/audio/a2.wav",
-    "https://media.githubusercontent.com/media/Danmaku-Big-Big-War/Danmaku-Big-Big-War/main/GitHubFiles/GameIcon.png",
+    "/icons/t-icon-x512.png",
+    "/icons/t-icon-x192.png",
+    "/icons/icon-x512.png",
+    "/icons/icon-x192.png",
     // Theme
     "/materialize/js/materialize.js",
     "/materialize/css/materialize.css",
