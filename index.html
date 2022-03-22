@@ -23,35 +23,14 @@
           href="./icons/icon-x512.png"/>
     <meta name="apple-mobile-web-app-status-bar" content="#546E7A"/>
     <meta name="theme-color" content="#546E7A"/>
-
-    <!--Import materialize.css-->
+    <!-- Import materialize.css -->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
+    <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body{
             overscroll-behavior: contain;
-        }
-        canvas {
-            border: 5px solid white;
-            background-color: grey;
-        }
-
-        body {
             background-color: gainsboro;
-        }
-
-        .outer-limit {
-            max-width: 720pt;
-        }
-
-        .canvas-size {
-            max-width: 1024px;
-            max-height: 1024px;
-            min-width: 100px;
-            min-height: 100px;
-            height: 300px;
-            width: 300px;
         }
     </style>
 </head>
@@ -63,9 +42,16 @@
             <a href="#" class="nav-content " style="font-size: 18pt;">量子虫洞</a>
         </div>
     </nav>
-    <div class="card-panel outer-limit z-depth-1" style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 720px">
+    <div class="card-panel outer-limit z-depth-1" style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 1080px">
             <div>
-                <canvas class="z-depth-1-half canvas-size"  width="1024" height="1024" onclick="canvasOnClick()" style="margin-bottom: 10px; width: 80%;height: 100%"></canvas>
+                <canvas class="z-depth-1-half"
+                        width="1024" height="1024"
+                        onclick="canvasOnClick()"
+                            style="margin-bottom: 10px;
+                            width: 80%;height: 100%; max-width: 256pt;
+                            border: 5px solid white;
+                            background-color: grey;">
+                    </canvas>
                 <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
                     <div class="input-field col s6">
                         <input id="nameInput" type="text" class="validate">
@@ -82,7 +68,7 @@
 </div>
 <script type="text/javascript" src="canvas.js"></script>
 <script type="text/javascript" src="index.js"></script>
-<!--JavaScript at end of body for optimized loading-->
+<!-- JavaScript at end of body for optimized loading -->
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 
