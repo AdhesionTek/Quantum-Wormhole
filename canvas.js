@@ -12,6 +12,9 @@ const birthInput = document.getElementById("birthdayInput");
 let seed = 1;
 let generated = 0;
 
+const heightRatio = 1;
+canvas.height = canvas.width * heightRatio;
+
 /**
  * Paint the canvas using name and birthday as input.
  */
@@ -24,6 +27,7 @@ function paintCanvas() {
 
     let height = canvas.height;
     let width = canvas.width;
+    console.log(height);
 
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
