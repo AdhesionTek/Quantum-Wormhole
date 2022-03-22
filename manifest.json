@@ -1,11 +1,11 @@
 {
-  "name": "量子虫洞",
-  "short_name": "量子虫洞",
+  "name": "Quantum Wormhole",
+  "short_name": "QuantumWormhole",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#546E7A",
   "theme_color": "#546E7A",
-  "description": "免费，自由，高效的量子虫洞",
+  "description": "One Wormhole a day, keep doctors away.",
   "orientation": "portrait-primary",
   "icons": [
     {
