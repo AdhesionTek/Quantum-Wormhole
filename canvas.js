@@ -6,11 +6,10 @@
 // Get Canvas and inputs
 const canvas = document.querySelector("canvas");
 const context2d = canvas.getContext("2d");
-const nameInput = document.getElementById("nameInput");
-const birthInput = document.getElementById("birthdayInput");
 
-let seed = 1;
-let generated = 0;
+const defaultSeed = 1;
+let seed = defaultSeed;
+let canvasSrt = "NOTHING";
 
 const heightRatio = 1;
 canvas.height = canvas.width * heightRatio;
@@ -18,23 +17,14 @@ canvas.height = canvas.width * heightRatio;
 /**
  * Paint the canvas using name and birthday as input.
  */
-function paintCanvas() {
-
-    if (!nameInput.value || !birthInput.value) {
-        alert("Input is not valid.");
-        return;
-    }
+function paintCanvas(seedInput) {
+    seed = seedInput;
 
     let height = canvas.height;
     let width = canvas.width;
-    console.log(height);
 
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
-
-    const fullValue = nameInput.value + birthInput.valueAsNumber;
-
-    seed = getHash(fullValue);
 
     const curveNumber = 512;
     for (let i = 0; i < curveNumber; i++) {
@@ -47,24 +37,7 @@ function paintCanvas() {
         context2d.bezierCurveTo(width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50, width / 2 + getRandomInt(100) - 50, height / 2 + getRandomInt(50) - 50, getRandomInt(width), getRandomInt(height));
         context2d.stroke();
     }
-    seed = 1;
-    generated = 1;
-}
-
-/**
- * Get hash value of a string
- * @param input
- * @returns {number}
- */
-function getHash(input) {
-    let hash = 0, i, chr;
-    if (input.length === 0) return hash;
-    for (i = 0; i < input.length; i++) {
-        chr = input.charCodeAt(i);
-        hash = ((hash << 5) - hash) + chr;
-        hash |= 0; // Convert to 32bit integer
-    }
-    return hash;
+    canvasSrt = "generated";
 }
 
 /**
@@ -83,10 +56,17 @@ function random() {
 }
 
 function canvasOnClick() {
-    if (generated === 1) {
-        let sound = new Audio("audio/a" + getRandomInt(3) + ".wav");
-        sound.play().then(r => {
-            sound.currentTime = 0
-        });
+    switch (canvasSrt){
+        case "NOTHING":
+            return;
+        case "generated":
+            let sound = new Audio("audio/a" + getRandomInt(3) + ".wav");
+            sound.play().then(r => {
+                sound.currentTime = 0
+            });
+            return;
+        default:
+            window.open(canvasSrt, '_blank');
+            return;
     }
 }
