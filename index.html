@@ -26,6 +26,8 @@
     <meta name="theme-color" content="#546E7A"/>
     <!-- Import materialize.css -->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="material-webfont/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
     <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
@@ -41,6 +43,9 @@
         }
         .content-text{
             text-align: start;
+        }
+        .need-translate{
+
         }
     </style>
 </head>
@@ -68,6 +73,7 @@
             </canvas>
             <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
                 <div class="input-field col s6">
+                    <span class="mdi mdi-account prefix grey-text text-darken-2"></span>
                     <input id="nameInput" type="text" class="validate">
                     <label class="need-translate" for="nameInput">full-name</label>
                 </div>
@@ -91,20 +97,30 @@
     </div>
     <footer class="page-footer blue-grey darken-1">
         <div class="container " style="margin-bottom: 10px">
-            <a class="github-button" href="https://github.com/AdhesionTek" data-size="large"
-               aria-label="Follow @AdhesionTek on GitHub">Follow @AdhesionTek</a>
-            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole/discussions"
-               data-icon="octicon-comment-discussion" data-size="large"
-               aria-label="Discuss AdhesionTek/Quantum-Wormhole on GitHub">Discuss</a>
-            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription"
-               data-icon="octicon-eye" data-size="large"
-               aria-label="Watch AdhesionTek/Quantum-Wormhole on GitHub">Watch</a>
-            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole" data-icon="octicon-star"
-               data-size="large" aria-label="Star AdhesionTek/Quantum-Wormhole on GitHub">Star</a>
+            <a class="waves-effect waves-light btn-small need-translate" style="text-transform: none;"
+               href="https://github.com/AdhesionTek/Quantum-Wormhole" target="_blank">
+                <span class="mdi mdi-github"></span>
+                <t class="need-translate">view-on-github</t>
+            </a>
+            <a class="waves-effect waves-light btn-small need-translate" style="text-transform: none;"
+               href="https://github.com/AdhesionTek/Quantum-Wormhole/discussions" target="_blank">
+                <span class="mdi mdi-forum"></span>
+                <t class="need-translate">discussions</t>
+            </a>
+            <a class="waves-effect waves-light btn-small need-translate" style="text-transform: none;"
+               href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription" target="_blank">
+                <span class="mdi mdi-eye"></span>
+                <t class="need-translate">watch</t>
+            </a>
+            <a class="waves-effect waves-light btn-small need-translate" style="text-transform: none;"
+               href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription" target="_blank">
+                <span class="mdi mdi-star-outline"></span>
+                <t class="need-translate">star</t>
+            </a>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p>Made with ❤️ by AdhesionTek. AdhesionTek Copyleft 2022</p>
+                <p>Made with ❤️ by AdhesionTek. Copyleft 2022</p>
             </div>
         </div>
     </footer>
@@ -112,6 +128,8 @@
 <script type="text/javascript" src="canvas.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="localization.js"></script>
+
+
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- JavaScript at end of body for optimized loading -->
