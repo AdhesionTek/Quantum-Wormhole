@@ -8,7 +8,8 @@
           href="./icons/t-icon-x512.png">
     <!-- Social media support -->
     <meta property="og:title" content="Quantum Wormhole"/>
-    <meta property="og:description" content="By people, for people, not profit. One Wormhole a day, keep doctors away."/>
+    <meta property="og:description"
+          content="By people, for people, not profit. One Wormhole a day, keep doctors away."/>
     <meta name="description" content="免费，开放，自由的量子虫洞"/>
     <meta property="og:image"
           content="https://media.githubusercontent.com/media/Danmaku-Big-Big-War/Danmaku-Big-Big-War/main/GitHubFiles/GameIcon.png"/>
@@ -28,9 +29,18 @@
     <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
-        body{
+        body {
             overscroll-behavior: contain;
             background-color: gainsboro;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        .content-text{
+            text-align: start;
         }
     </style>
 </head>
@@ -42,33 +52,65 @@
             <a href="#" class="nav-content need-translate" style="font-size: 18pt;">quantum-wormhole</a>
         </div>
     </nav>
-    <div class="card-panel outer-limit z-depth-1" style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 1080px">
-            <div>
-                <canvas class="z-depth-1-half"
-                        width="1024" height="1024"
-                        onclick="canvasOnClick()"
-                            style="margin-bottom: 10px;
+    <div class="card-panel outer-limit z-depth-1"
+         style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 600px">
+        <div>
+            <canvas class="z-depth-1-half"
+                    width="1024" height="1024"
+                    onclick="canvasOnClick()"
+                    style="margin-bottom: 10px;
                             width: 80%;height: 100%; max-width: 256pt;
                             border: 5px solid white;
                             background-color: grey;">
-                    </canvas>
-                <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
-                    <div class="input-field col s6">
-                        <input id="nameInput" type="text" class="validate">
-                        <label class="need-translate" for="nameInput">full-name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="date" id="birthdayInput" value="2009-09-09" name="birthday">
-                        <label class="need-translate" for="birthdayInput">birthday</label>
-                    </div>
+            </canvas>
+            <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
+                <div class="input-field col s6">
+                    <input id="nameInput" type="text" class="validate">
+                    <label class="need-translate" for="nameInput">full-name</label>
                 </div>
-                <a class="waves-effect waves-light btn-large z-depth-1-half" onclick="generateOnClick()">Generate</a>
+                <div class="input-field col s6">
+                    <input type="date" id="birthdayInput" value="2009-09-09" name="birthday">
+                    <label class="need-translate" for="birthdayInput">birthday</label>
+                </div>
             </div>
+            <a class="waves-effect waves-light btn-large z-depth-1-half" onclick="generateOnClick()">Generate</a>
+        </div>
     </div>
+    <div class="card-panel outer-limit z-depth-1"
+         style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 600px">
+        <h5 class="content-text">What is this?</h5>
+        <p class="content-text">It is an open source implementation of Quantum Wormhole, which generates a unique pattern based on your name and birthday.</p>
+        <h5 class="content-text">Is it safe?</h5>
+        <p class="content-text">All of your personal data is processed locally, you can check our implementation on GitHub.</p>
+        <h5 class="content-text">Want to own your Quantum Wormhole?</h5>
+        <p class="content-text">Send any amount of ethereum to the following wallet, you will have right to use Quantum Wormhole for all legal purpose, including but not limited to commercial use. </p>
+        <p class="content-text">ETH：0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd</p>
+    </div>
+    <footer class="page-footer blue-grey darken-1">
+        <div class="container ">
+            <a class="github-button" href="https://github.com/AdhesionTek" data-size="large"
+               aria-label="Follow @AdhesionTek on GitHub">Follow @AdhesionTek</a>
+            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole/discussions"
+               data-icon="octicon-comment-discussion" data-size="large"
+               aria-label="Discuss AdhesionTek/Quantum-Wormhole on GitHub">Discuss</a>
+            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription"
+               data-icon="octicon-eye" data-size="large"
+               aria-label="Watch AdhesionTek/Quantum-Wormhole on GitHub">Watch</a>
+            <a class="github-button" href="https://github.com/AdhesionTek/Quantum-Wormhole" data-icon="octicon-star"
+               data-size="large" aria-label="Star AdhesionTek/Quantum-Wormhole on GitHub">Star</a>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p>Made with ❤️ by AdhesionTek. AdhesionTek Copyleft 2022</p>
+            </div>
+        </div>
+    </footer>
 </div>
 <script type="text/javascript" src="canvas.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="localization.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- JavaScript at end of body for optimized loading -->
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>

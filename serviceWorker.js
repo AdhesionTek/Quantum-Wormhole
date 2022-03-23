@@ -1,4 +1,5 @@
-const staticQuantumWormhole = "quantum-wormhole-v1"
+const staticQuantumWormhole = "quantum-wormhole-v1";
+const version = "1.1.1";
 const assets = [
     // Code Files
     "/",
