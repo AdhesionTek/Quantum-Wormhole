@@ -12,7 +12,7 @@ if (!lang.includes("cn")){
 translatesElements = document.getElementsByClassName("need-translate");
 Array.from(translatesElements).forEach(element => {
     switch (element.innerHTML) {
-        case "generate":
+        case "gen":
             if (lang === "zh-cn") {
                 element.innerHTML = "生成";
             }
@@ -46,7 +46,7 @@ Array.from(translatesElements).forEach(element => {
                 element.innerHTML = "姓名";
             }
             else if (lang.includes("zh")){
-                element.innerHTML = "討論";
+                element.innerHTML = "姓名";
             }
             else if (lang.includes("jp")){
                 element.innerHTML = "氏名";
@@ -60,7 +60,7 @@ Array.from(translatesElements).forEach(element => {
                 element.innerHTML = "生日";
             }
             else if (lang.includes("zh")){
-                element.innerHTML = "討論";
+                element.innerHTML = "生日";
             }
             else if (lang.includes("jp")){
                 element.innerHTML = "誕生日";
@@ -70,7 +70,10 @@ Array.from(translatesElements).forEach(element => {
             }
             return;
         case "watch":
-            if (lang.includes("jp")){
+            if (lang === "zh-cn") {
+                element.innerHTML = "视监";
+            }
+            else if (lang.includes("jp")){
                 element.innerHTML = "じーー";
             }
             else {element.innerHTML = "Watch";
@@ -126,6 +129,8 @@ Array.from(translatesElements).forEach(element => {
                 element.innerHTML = "Made with ❤️ by AdhesionTek. Copyleft 2022.";
             }
             return;
+        case "eth-wallet":
+            element.innerHTML = "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd";
         default:
             return;
     }
