@@ -1,3 +1,5 @@
+
+
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("serviceWorker.js").then(registration => {
         //console.log("Service Worker Registered.");
@@ -9,13 +11,6 @@ if ("serviceWorker" in navigator) {
     console.log("Service Worker Failed.");
     console.log("No serviceWorker in navigator.");
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
-});
-
 
 
 const nameInput = document.getElementById("nameInput");
