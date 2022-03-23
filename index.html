@@ -64,6 +64,10 @@
         .content-centered{
             text-align: center;
         }
+        @font-face {
+            font-family: JosefinSans;
+            src: url("third-party/fonts/static/JosefinSans-Regular.ttf") format("truetype");
+        }
     </style>
 </head>
 
@@ -72,7 +76,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper blue-grey">
-                <a href="#" class="nav-content need-translate" style="font-size: 18pt;padding-left: 20px">quantum-wormhole</a>
+                <a href="#" class="nav-content need-translate josefin-sans" style="font-size: 18pt;padding-left: 20px;">quantum-wormhole</a>
             </div>
         </nav>
     </div>
@@ -90,14 +94,14 @@
             <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
                 <div class="input-field col s6">
                     <input id="nameInput" type="text" class="validate">
-                    <label class="need-translate" for="nameInput">full-name</label>
+                    <label class="need-translate josefin-sans" for="nameInput">full-name</label>
                 </div>
                 <div class="input-field col s6">
                     <input type="date" id="birthdayInput" value="2009-09-09" name="birthday">
-                    <label class="need-translate" for="birthdayInput">birthday</label>
+                    <label class="need-translate josefin-sans" for="birthdayInput">birthday</label>
                 </div>
             </div>
-            <a class="waves-effect waves-light btn-large z-depth-1-half"
+            <a class="waves-effect waves-light btn-large z-depth-1-half "
                onclick="generateOnClick()">
                 <span class="mdi mdi-sync mdi-24px left" style="margin-right: 10px"></span>
                 generate
@@ -112,12 +116,12 @@
         <h5 class="content-text">Is it safe?</h5>
         <p class="content-text">All of your personal data is processed locally, you can check our implementation on
             GitHub.</p>
-        <h5 class="content-text">Is this NFT?</h5>
+        <h5 class="content-text">Is this an NFT?</h5>
         <p>Learn more <a id="show-dialog" class="teal-text text-darken-2">here</a>.</p>
         <dialog class="mdl-dialog" style="width: 1000px">
-            <h4 class="mdl-dialog__title" style="font-size: 20pt">Is this NFT?</h4>
+            <h4 class="mdl-dialog__title" style="font-size: 20pt">Is this an NFT?</h4>
             <div class="mdl-dialog__content">
-                <p>
+                <p >
                     No, it isn't. But you can purchase it if you want.
                 </p>
                 <p>Send any amount of ethereum to the following wallet, you will have the right to use Quantum

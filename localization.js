@@ -2,6 +2,13 @@ const lang = navigator.language.toLowerCase();
 
 console.log(lang);
 
+if (!lang.includes("cn")){
+    customFontElements = document.querySelectorAll(".josefin-sans");
+    Array.from(customFontElements).forEach(element =>{
+        element.style.fontFamily="JosefinSans,sans-serif";
+    })
+}
+
 translatesElements = document.getElementsByClassName("need-translate");
 Array.from(translatesElements).forEach(element => {
     switch (element.innerHTML) {
