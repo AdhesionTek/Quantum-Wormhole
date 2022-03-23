@@ -15,14 +15,28 @@ Array.from(translatesElements).forEach(element => {
         case "generate":
             if (lang === "zh-cn") {
                 element.innerHTML = "生成";
-            } else {
+            }
+            else if (lang.includes("zh")){
+                element.innerHTML = "生成";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "ジェネレート";
+            }
+            else {
                 element.innerHTML = "Generate";
             }
             return;
         case "quantum-wormhole":
             if (lang === "zh-cn") {
                 element.innerHTML = "量子虫洞";
-            } else {
+            }
+            else if (lang.includes("zh")){
+                element.innerHTML = "量子蟲洞";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "量子ワームホール";
+            }
+            else {
                 element.innerHTML = "Quantum Wormhole";
             }
             return;
@@ -30,46 +44,86 @@ Array.from(translatesElements).forEach(element => {
             console.log("He")
             if (lang === "zh-cn") {
                 element.innerHTML = "姓名";
-            } else {
+            }
+            else if (lang.includes("zh")){
+                element.innerHTML = "討論";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "氏名";
+            }
+            else {
                 element.innerHTML = "Full Name";
             }
             return;
         case "birthday":
             if (lang === "zh-cn") {
                 element.innerHTML = "生日";
-            } else {
+            }
+            else if (lang.includes("zh")){
+                element.innerHTML = "討論";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "誕生日";
+            }
+            else {
                 element.innerHTML = "Birthday";
             }
             return;
         case "watch":
-            element.innerHTML = "Watch";
+            if (lang.includes("jp")){
+                element.innerHTML = "じーー";
+            }
+            else {element.innerHTML = "Watch";
+            }
             return;
         case "discussions":
             if (lang === "zh-cn") {
                 element.innerHTML = "讨论";
-            } else {
+            }
+            else if (lang.includes("zh")){
+                element.innerHTML = "討論";
+            }
+            else {
                 element.innerHTML = "Discussions";
             }
             return;
         case "view-on-github":
             if (lang === "zh-cn") {
                 element.innerHTML = "在Github上查看";
-            } else {
+            }
+            else if (lang.includes("zh")) {
+                element.innerHTML = "在Github上查看";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "Githubで表示";
+            }
+            else {
                 element.innerHTML = "View On Github";
             }
             return;
         case "star":
             if (lang === "zh-cn") {
                 element.innerHTML = "给星星";
-            } else {
+            }
+            else if (lang.includes("zh")) {
+                element.innerHTML = "給星星";
+            }
+            else if (lang.includes("jp")){
+                element.innerHTML = "スター";
+            }
+            else {
                 element.innerHTML = "Star";
             }
             return;
         case "bottom-texts":
             if (lang === "zh-cn") {
                 element.innerHTML = "粘连科技用❤️制作 Copyleft 2022";
-            } else {
-                element.innerHTML = "Made with ❤️ by AdhesionTek. Copyleft 2022";
+            }
+            else if (lang.includes("zh")) {
+                element.innerHTML = "粘連科技用❤️製作 Copyleft 2022";
+            }
+            else {
+                element.innerHTML = "Made with ❤️ by AdhesionTek. Copyleft 2022.";
             }
             return;
         default:
