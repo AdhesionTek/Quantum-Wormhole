@@ -1,11 +1,12 @@
 const staticQuantumWormhole = "quantum-wormhole-v1";
-const version = "1.1.1";
+const version = "1.1.3";
 const assets = [
     // Code Files
     "/",
     "/index.html",
     "/canvas.js",
     "/index.js",
+    "./localization.js",
     // Assets
     "/audio/a0.wav",
     "/audio/a1.wav",
@@ -15,8 +16,11 @@ const assets = [
     "/icons/icon-x512.png",
     "/icons/icon-x192.png",
     // Theme
-    "/materialize/js/materialize.js",
-    "/materialize/css/materialize.css",
+    "/third-party/materialize/js/materialize.js",
+    "/third-party/materialize/css/materialize.css",
+    "/third-party/material-webfont/css/materialdesignicons.css",
+    "/third-party/material-webfont/fonts/materialdesignicons-webfont.ttf",
+    "/third-party/materialize/css/materialize.css",
 ]
 
 self.addEventListener("install", installEvent => {
