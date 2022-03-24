@@ -19,8 +19,8 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")){
                 element.innerHTML = "生成";
             }
-            else if (lang.includes("jp")){
-                element.innerHTML = "ジェネレート";
+            else if (lang==="ja-jp"){
+                element.innerHTML = "生成する";
             }
             else {
                 element.innerHTML = "Generate";
@@ -33,7 +33,7 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")){
                 element.innerHTML = "量子蟲洞";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "量子ワームホール";
             }
             else {
@@ -48,7 +48,7 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")){
                 element.innerHTML = "姓名";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "氏名";
             }
             else {
@@ -62,7 +62,7 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")){
                 element.innerHTML = "生日";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "誕生日";
             }
             else {
@@ -73,7 +73,7 @@ Array.from(translatesElements).forEach(element => {
             if (lang === "zh-cn") {
                 element.innerHTML = "视监";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "じーー";
             }
             else {element.innerHTML = "Watch";
@@ -86,6 +86,9 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")){
                 element.innerHTML = "討論";
             }
+            else if (lang==="ja-jp"){
+                element.innerHTML = "ディスカッション ";
+            }
             else {
                 element.innerHTML = "Discussions";
             }
@@ -97,7 +100,7 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")) {
                 element.innerHTML = "在Github上查看";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "Githubで表示";
             }
             else {
@@ -111,7 +114,7 @@ Array.from(translatesElements).forEach(element => {
             else if (lang.includes("zh")) {
                 element.innerHTML = "給星星";
             }
-            else if (lang.includes("jp")){
+            else if (lang==="ja-jp"){
                 element.innerHTML = "スター";
             }
             else {

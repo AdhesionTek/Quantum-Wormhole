@@ -1,5 +1,5 @@
 const staticQuantumWormhole = "quantum-wormhole-v1";
-const version = "1.1.3";
+const version = "1.1.4";
 
 let versionView = document.getElementById("versionNumber");
 versionView.innerText = "v "+version
