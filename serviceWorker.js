@@ -1,9 +1,5 @@
 const staticQuantumWormhole = "quantum-wormhole-v1";
-const version = "1.1.4";
-
-let versionView = document.getElementById("versionNumber");
-versionView.innerText = "v "+version
-
+const version = "1.1.4"; // Version for service worker
 
 const assets = [
     // Code Files
@@ -11,7 +7,7 @@ const assets = [
     "/index.html",
     "/canvas.js",
     "/index.js",
-    "./localization.js",
+    "/localization.js",
     // Assets
     "/audio/a0.wav",
     "/audio/a1.wav",
@@ -25,7 +21,6 @@ const assets = [
     "/third-party/materialize/css/materialize.css",
     "/third-party/material-webfont/css/materialdesignicons.css",
     "/third-party/material-webfont/fonts/materialdesignicons-webfont.ttf",
-    "/third-party/materialize/css/materialize.css",
 ]
 
 self.addEventListener("install", installEvent => {

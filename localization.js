@@ -41,7 +41,6 @@ Array.from(translatesElements).forEach(element => {
             }
             return;
         case "full-name":
-            console.log("He")
             if (lang === "zh-cn") {
                 element.innerHTML = "姓名";
             }

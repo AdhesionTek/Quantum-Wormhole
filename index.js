@@ -1,7 +1,5 @@
-
-
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("serviceWorker.js").then(registration => {
+    navigator.serviceWorker.register("/serviceWorker.js").then(registration => {
         //console.log("Service Worker Registered.");
     }).catch(error => {
         console.log("Service Worker Failed.");
@@ -12,6 +10,10 @@ if ("serviceWorker" in navigator) {
     console.log("No serviceWorker in navigator.");
 }
 
+
+let version = "1.1.4"; // Version for index
+let versionView = document.getElementById("versionNumber");
+versionView.innerText = "v "+version
 
 const nameInput = document.getElementById("nameInput");
 const birthInput = document.getElementById("birthdayInput");
