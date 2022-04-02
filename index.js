@@ -40,7 +40,7 @@ function generateOnClick() {
         if (nameInput.value.toLowerCase().match(/(win|windows)11/g)) {
             canvasSrt="https://www.bilibili.com/video/BV1yb4y1x7Ky";
         }
-        if (nameInput.value.toLowerCase().includes("Ceylan") || nameInput,value.includes("锡兰")) {
+        if (nameInput.value.toLowerCase().includes("Ceylan") || nameInput.value.includes("锡兰")) {
             canvasSrt="https://www.youtube.com/user/CeylanLC/featured";
         }
     }
