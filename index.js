@@ -31,6 +31,18 @@ function generateOnClick() {
         if (nameInput.value.toLowerCase().includes("罕见")){
             canvasSrt="https://www.bilibili.com/video/BV1p64y1X7j2";
         }
+        if (nameInput.value.includes("嘉心糖") || nameInput.value.includes("嘉然")) {
+            canvasSrt="https://www.bilibili.com/video/BV1FX4y1g7u8";
+        }
+        if (nameInput.value.includes("何同学")) {
+            canvasSrt="https://www.bilibili.com/video/BV1244y1p7kt";
+        }
+        if (nameInput.value.toLowerCase().match(/(win|windows)11/g)) {
+            canvasSrt="https://www.bilibili.com/video/BV1yb4y1x7Ky";
+        }
+        if (nameInput.value.toLowerCase().includes("ceylan") || nameInput.value.includes("锡兰")) {
+            canvasSrt="https://www.youtube.com/user/CeylanLC/featured";
+        }
     }
 }
 
