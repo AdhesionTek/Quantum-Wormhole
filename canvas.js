@@ -17,6 +17,7 @@ const CURVE_NUMBER = 512;
 const SRT_TYPES = {
   Nothing: "NOTHING",
   Generated: "GENERATED",
+  Url: "URL"
 };
 
 export class WormholeCanvas {
@@ -29,8 +30,17 @@ export class WormholeCanvas {
 
     this.seed = DEFAULT_SEED;
     this.canvasSrt = SRT_TYPES.Nothing;
+    this.clickHref = "";
 
     canvas.height = canvas.width * HEIGHT_RADIO;
+  }
+
+  /**
+   * @param {string} href
+   */
+  set ClickHref(href) {
+    this.clickHref = href;
+    this.canvasSrt = SRT_TYPES.Url;
   }
 
   paint() {
@@ -42,6 +52,9 @@ export class WormholeCanvas {
     switch (canvasSrt) {
       case SRT_TYPES.Generated:
         playAudioThenRewind(`audio/a${getRandomInt(3)}.wav`);
+        break;
+      case SRT_TYPES.Url:
+        window.open(this.clickHref, "_blank");
         break;
     }
   }
