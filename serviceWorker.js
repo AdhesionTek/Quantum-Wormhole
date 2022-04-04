@@ -7,7 +7,6 @@ const assets = [
   "/index.html",
   "/canvas.js",
   "/index.js",
-  "/localization.js",
   // Assets
   "/audio/a0.wav",
   "/audio/a1.wav",
