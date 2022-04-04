@@ -139,13 +139,18 @@ const getRandomBase = (seed) => {
   return x - Math.floor(x);
 };
 
+/** @type {Record<string, HTMLAudioElement>} */
+const audioCache = {}
+
 /**
  * Play the audio, and rewind it in the end.
  *
  * @param {string} src The audio URI.
  */
 const playAudioThenRewind = async (src) => {
-  const sound = new Audio(src);
-  await sound.play();
-  sound.currentTime = 0;
+  if (!(src in audioCache)) {
+    audioCache[src] = new Audio(src);
+  }
+  audioCache[src].currentTime = 0;
+  await audioCache[src].play();
 };
