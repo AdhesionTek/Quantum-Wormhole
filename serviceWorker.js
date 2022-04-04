@@ -21,6 +21,13 @@ const assets = [
     "/third-party/materialize/css/materialize.css",
     "/third-party/material-webfont/css/materialdesignicons.css",
     "/third-party/material-webfont/fonts/materialdesignicons-webfont.ttf",
+    // Localizations
+    '/locales/index.mjs',
+    '/locales/en/translation.json',
+    '/locales/ja/translation.json',
+    '/locales/zh/translation.json',
+    '/locales/zh-HK/translation.json',
+    '/locales/zh-TW/translation.json',
 ]
 
 self.addEventListener("install", installEvent => {
