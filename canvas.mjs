@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * This file controls the canvas.
  */
@@ -25,14 +27,14 @@ export class WormholeCanvas {
    * @param {CSSSelector=} [selector="canvas"]
    */
   constructor(selector = "canvas") {
-    this.canvas = document.querySelector(selector);
-    this.context2d = canvas.getContext("2d");
+    this.canvas = /** @type {HTMLCanvasElement} */ (document.querySelector(selector));
+    this.context2d = this.canvas.getContext("2d");
 
     this.seed = DEFAULT_SEED;
     this.canvasSrt = SRT_TYPES.Nothing;
     this.clickHref = "";
 
-    this.canvas.height = canvas.width * HEIGHT_RADIO;
+    this.canvas.height = this.canvas.width * HEIGHT_RADIO;
     this.canvas.addEventListener('click', this.onClick.bind(this));
   }
 
@@ -50,9 +52,9 @@ export class WormholeCanvas {
   }
 
   onClick() {
-    switch (canvasSrt) {
+    switch (this.canvasSrt) {
       case SRT_TYPES.Generated:
-        playAudioThenRewind(`audio/a${getRandomInt(3)}.wav`);
+        playAudioThenRewind(`audio/a${getRandomInt(this.seed, 3)}.wav`);
         break;
       case SRT_TYPES.Url:
         window.open(this.clickHref, "_blank");
@@ -75,8 +77,10 @@ export class WormholeCanvas {
    * @private
    */
   statelessPaint() {
-    let height = this.height;
-    let width = this.width;
+    const height = this.height;
+    const width = this.width;
+    const context2d = this.context2d;
+    const getRandomInt = this.getRandomInt;
   
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
@@ -99,25 +103,35 @@ export class WormholeCanvas {
       context2d.stroke();
     }
   }
+
+  /**
+   * @param {[number, number?]} args 
+   * @returns 
+   */
+  getRandomInt(...args) {
+    return getRandomInt(this.seed, ...args);
+  }
 }
 
 /**
  * Get a random integer between min and max.
  * 
+ * @param {number} seed
  * @param {number} max
  * @param {number=} [min=0]
  * @returns {number}
  */
-const getRandomInt = (max, min = 0) => (
-  Math.floor(getRandomBase() * max) + min
+const getRandomInt = (seed, max, min = 0) => (
+  Math.floor(getRandomBase(seed) * max) + min
 );
 
 /**
  * Generate a random number based on the global {@link seed}.
  * 
+ * @param {number} seed
  * @returns {number}
  */
-const getRandomBase = () => {
+const getRandomBase = (seed) => {
   let x = Math.sin(seed++) * 10000;
   return x - Math.floor(x);
 };
