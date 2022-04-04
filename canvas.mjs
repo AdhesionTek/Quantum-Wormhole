@@ -82,7 +82,6 @@ export class WormholeCanvas {
     const height = this.height;
     const width = this.width;
     const context2d = this.context2d;
-    const getRandomInt = this.getRandomInt;
 
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
@@ -93,14 +92,14 @@ export class WormholeCanvas {
               ${Math.floor((255 * i) / CURVE_NUMBER)},
               ${Math.floor((255 * i) / CURVE_NUMBER)})`;
       context2d.beginPath();
-      context2d.moveTo(getRandomInt(width), getRandomInt(height));
+      context2d.moveTo(this.getRandomInt(width), this.getRandomInt(height));
       context2d.bezierCurveTo(
-        width / 2 + getRandomInt(100) - 50,
-        height / 2 + getRandomInt(50) - 50,
-        width / 2 + getRandomInt(100) - 50,
-        height / 2 + getRandomInt(50) - 50,
-        getRandomInt(width),
-        getRandomInt(height)
+        width / 2 + this.getRandomInt(100) - 50,
+        height / 2 + this.getRandomInt(50) - 50,
+        width / 2 + this.getRandomInt(100) - 50,
+        height / 2 + this.getRandomInt(50) - 50,
+        this.getRandomInt(width),
+        this.getRandomInt(height)
       );
       context2d.stroke();
     }
