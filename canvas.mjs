@@ -32,7 +32,8 @@ export class WormholeCanvas {
     this.canvasSrt = SRT_TYPES.Nothing;
     this.clickHref = "";
 
-    canvas.height = canvas.width * HEIGHT_RADIO;
+    this.canvas.height = canvas.width * HEIGHT_RADIO;
+    this.canvas.addEventListener('click', this.onClick.bind(this));
   }
 
   /**
