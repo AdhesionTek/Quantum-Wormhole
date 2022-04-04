@@ -67,9 +67,6 @@
         text-align: start;
       }
 
-      .need-translate {
-      }
-
       .social-btn {
         text-transform: none;
         margin-bottom: 10px;
@@ -81,15 +78,22 @@
       .content-centered {
         text-align: center;
       }
+
       @font-face {
         font-family: JosefinSans;
         src: url("third-party/fonts/static/JosefinSans-Regular.ttf")
           format("truetype");
       }
     </style>
+
     <script defer type="module">
+      import '/index.mjs';
       import "/locales/index.mjs";
     </script>
+    <script
+      defer
+      src="third-party/materialize/js/materialize.min.js"
+    ></script>
   </head>
 
   <body class="blue-grey">
@@ -115,7 +119,6 @@
             class="z-depth-1-half"
             width="1024"
             height="1024"
-            onclick="canvasOnClick()"
             style="
               margin-bottom: 10px;
               width: 80%;
@@ -148,16 +151,16 @@
               >
             </div>
           </div>
-          <a
+          <button
+            id="generate-btn"
             class="waves-effect waves-light btn-large z-depth-1-half"
-            onclick="generateOnClick()"
           >
             <span
               class="mdi mdi-sync mdi-24px left"
               style="margin-right: 10px"
             ></span>
             <t class="need-translate">gen</t>
-          </a>
+          </button>
         </div>
       </div>
       <div
@@ -270,14 +273,5 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="canvas.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <!-- <script type="text/javascript" src="localization.js"></script> -->
-
-    <!-- JavaScript at end of body for optimized loading -->
-    <script
-      type="text/javascript"
-      src="third-party/materialize/js/materialize.min.js"
-    ></script>
   </body>
 </html>
