@@ -6,7 +6,10 @@ export const VERSION = "1.1.4";
 
 createServiceWorker();
 setVersion(document.querySelectorAll(".version"));
-document.getElementById("generate-btn").onclick = onGenerateSubmit;
+document.getElementById("generate-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  onSubmit();
+})
 
 async function createServiceWorker() {
   if ("serviceWorker" in navigator) {
@@ -43,9 +46,9 @@ const birthInput = /** @type {HTMLInputElement} */ (
 );
 
 /**
- * The method that will be triggered when "submit" clicked.
+ * The method that will be triggered when "generate" clicked.
  */
-function onGenerateSubmit() {
+function onSubmit() {
   // We have checked it in the form stage; thus,
   // we don't need to check it again.
   const valueToHash = `${nameInput.value}${birthInput.valueAsNumber}`;

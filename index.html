@@ -126,38 +126,42 @@
             "
           >
           </canvas>
-          <div
-            class="row card"
-            style="padding-top: 20px; padding-left: 10px; padding-right: 10px"
-          >
-            <div class="input-field col s6">
-              <input id="nameInput" type="text" class="validate" />
-              <label class="need-translate josefin-sans" for="nameInput"
-                >full-name</label
-              >
+          <form action="#" id="generate-form">
+            <div
+              class="row card"
+              style="padding-top: 20px; padding-left: 10px; padding-right: 10px"
+            >
+              <div class="input-field col s6">
+                <input required id="nameInput" type="text" class="validate" />
+                <label class="need-translate josefin-sans" for="nameInput"
+                  >full-name</label
+                >
+              </div>
+              <div class="input-field col s6">
+                <input
+                  type="date"
+                  id="birthdayInput"
+                  value="2009-09-09"
+                  name="birthday"
+                  required
+                />
+                <label class="need-translate josefin-sans" for="birthdayInput"
+                  >birthday</label
+                >
+              </div>
             </div>
-            <div class="input-field col s6">
-              <input
-                type="date"
-                id="birthdayInput"
-                value="2009-09-09"
-                name="birthday"
-              />
-              <label class="need-translate josefin-sans" for="birthdayInput"
-                >birthday</label
-              >
-            </div>
-          </div>
-          <button
-            id="generate-btn"
-            class="waves-effect waves-light btn-large z-depth-1-half"
-          >
-            <span
-              class="mdi mdi-sync mdi-24px left"
-              style="margin-right: 10px"
-            ></span>
-            <t class="need-translate">gen</t>
-          </button>
+            <button
+              id="generate-btn"
+              class="waves-effect waves-light btn-large z-depth-1-half"
+              type="submit"
+            >
+              <span
+                class="mdi mdi-sync mdi-24px left"
+                style="margin-right: 10px"
+              ></span>
+              <t class="need-translate">gen</t>
+            </button>
+          </form>
         </div>
       </div>
       <div
