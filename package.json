@@ -1,0 +1,20 @@
+{
+  "name": "quantum-wormhole",
+  "version": "1.2.0",
+  "description": "A free & open source implementation of Ocean Peace Quantum Wormhole with added features including 热水器.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdhesionTek/Quantum-Wormhole.git"
+  },
+  "author": "AdhesionTek",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/AdhesionTek/Quantum-Wormhole/issues"
+  },
+  "homepage": "https://github.com/AdhesionTek/Quantum-Wormhole#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
