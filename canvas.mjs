@@ -110,7 +110,10 @@ export class WormholeCanvas {
    * @returns
    */
   getRandomInt(...args) {
-    return getRandomInt(this.seed, ...args);
+    const val = getRandomInt(this.seed, ...args);
+    this.seed++;
+
+    return val;
   }
 }
 
@@ -132,7 +135,7 @@ const getRandomInt = (seed, max, min = 0) =>
  * @returns {number}
  */
 const getRandomBase = (seed) => {
-  let x = Math.sin(seed++) * 10000;
+  let x = Math.sin(seed) * 10000;
   return x - Math.floor(x);
 };
 
