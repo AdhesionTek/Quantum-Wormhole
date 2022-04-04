@@ -1,12 +1,12 @@
 {
-    "gen1": "產生",
-    "quantum-wormhole": "量子蟲洞",
-    "full-name": "姓名",
-    "birthday": "生日",
-    "watch": "視監",
-    "discussions": "討論",
-    "view-on-github": "在 GitHub 上查看",
-    "star": "給星星",
-    "bottom-texts": "黏連科技用❤️製作 Copyleft 2022",
-    "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd"
+  "gen1": "產生",
+  "quantum-wormhole": "量子蟲洞",
+  "full-name": "姓名",
+  "birthday": "生日",
+  "watch": "視監",
+  "discussions": "討論",
+  "view-on-github": "在 GitHub 上查看",
+  "star": "給星星",
+  "bottom-texts": "黏連科技用❤️製作 Copyleft 2022",
+  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd"
 }

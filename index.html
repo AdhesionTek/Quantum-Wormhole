@@ -1,193 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title class="need-translate">quantum-wormhole</title>
-    <link rel="icon"
-          href="./icons/t-icon-x512.png">
+    <link rel="icon" href="./icons/t-icon-x512.png" />
     <!-- Social media support -->
-    <meta property="og:title" content="Quantum Wormhole"/>
-    <meta property="og:description"
-          content="By people, for people, not profit. One Wormhole a day, keep doctors away."/>
-    <meta name="description" content="免费，开放，自由的量子虫洞"/>
-    <meta property="og:image"
-          content="https://media.githubusercontent.com/media/Danmaku-Big-Big-War/Danmaku-Big-Big-War/main/GitHubFiles/GameIcon.png"/>
-    <meta property="og:image:width" content="2048"/>
-    <meta property="og:image:height" content="2048"/>
+    <meta property="og:title" content="Quantum Wormhole" />
+    <meta
+      property="og:description"
+      content="By people, for people, not profit. One Wormhole a day, keep doctors away."
+    />
+    <meta name="description" content="免费，开放，自由的量子虫洞" />
+    <meta
+      property="og:image"
+      content="https://media.githubusercontent.com/media/Danmaku-Big-Big-War/Danmaku-Big-Big-War/main/GitHubFiles/GameIcon.png"
+    />
+    <meta property="og:image:width" content="2048" />
+    <meta property="og:image:height" content="2048" />
     <!-- PWA support -->
-    <link rel="manifest" href="manifest.json"/>
-    <meta name="mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-title" content="Quantum Wormhole"/>
-    <link rel="apple-touch-icon"
-          href="./icons/icon-x512.png"/>
-    <meta name="apple-mobile-web-app-status-bar" content="#546E7A"/>
-    <meta name="theme-color" content="#546E7A"/>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Quantum Wormhole" />
+    <link rel="apple-touch-icon" href="./icons/icon-x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#546E7A" />
+    <meta name="theme-color" content="#546E7A" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- Import third party css -->
-    <link type="text/css" rel="stylesheet" href="third-party/materialize/css/materialize.min.css" media="screen,projection"/>
-    <link href="third-party/material-webfont/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="./third-party/mdl/material.min.css">
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="third-party/materialize/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      href="third-party/material-webfont/css/materialdesignicons.min.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./third-party/mdl/material.min.css" />
     <script src="./third-party/mdl/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- Let browser know website is optimized for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body {
-            overscroll-behavior: contain;
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
+      body {
+        overscroll-behavior: contain;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
 
-        main {
-            flex: 1 0 auto;
-        }
+      main {
+        flex: 1 0 auto;
+      }
 
-        .content-text {
-            text-align: start;
-        }
+      .content-text {
+        text-align: start;
+      }
 
-        .need-translate {
+      .need-translate {
+      }
 
-        }
-
-        .social-btn {
-            text-transform: none;
-            margin-bottom: 10px;
-        }
-        .centered{
-            margin-left:auto; margin-right: auto;
-        }
-        .content-centered{
-            text-align: center;
-        }
-        @font-face {
-            font-family: JosefinSans;
-            src: url("third-party/fonts/static/JosefinSans-Regular.ttf") format("truetype");
-        }
+      .social-btn {
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+      .centered {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .content-centered {
+        text-align: center;
+      }
+      @font-face {
+        font-family: JosefinSans;
+        src: url("third-party/fonts/static/JosefinSans-Regular.ttf")
+          format("truetype");
+      }
     </style>
     <script defer type="module">
-        import '/locales/index.mjs';
+      import "/locales/index.mjs";
     </script>
-</head>
+  </head>
 
-<body class="blue-grey">
-<div style="background-color: gainsboro;">
-    <div class="navbar-fixed">
+  <body class="blue-grey">
+    <div style="background-color: gainsboro">
+      <div class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper blue-grey">
-                <a href="#" class="nav-content need-translate josefin-sans" style="font-size: 18pt;padding-left: 20px;">quantum-wormhole</a>
-            </div>
+          <div class="nav-wrapper blue-grey">
+            <a
+              href="#"
+              class="nav-content need-translate josefin-sans"
+              style="font-size: 18pt; padding-left: 20px"
+              >quantum-wormhole</a
+            >
+          </div>
         </nav>
-    </div>
-    <div class="card-panel outer-limit z-depth-1 centered content-centered"
-         style="margin-top: 10px; max-width: 700px">
+      </div>
+      <div
+        class="card-panel outer-limit z-depth-1 centered content-centered"
+        style="margin-top: 10px; max-width: 700px"
+      >
         <div>
-            <canvas class="z-depth-1-half"
-                    width="1024" height="1024"
-                    onclick="canvasOnClick()"
-                    style="margin-bottom: 10px;
-                            width: 80%;height: 100%; max-width: 256pt;
-                            border: 5px solid white;
-                            background-color: grey;">
-            </canvas>
-            <div class="row card" style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
-                <div class="input-field col s6">
-                    <input id="nameInput" type="text" class="validate">
-                    <label class="need-translate josefin-sans" for="nameInput">full-name</label>
-                </div>
-                <div class="input-field col s6">
-                    <input type="date" id="birthdayInput" value="2009-09-09" name="birthday">
-                    <label class="need-translate josefin-sans" for="birthdayInput">birthday</label>
-                </div>
+          <canvas
+            class="z-depth-1-half"
+            width="1024"
+            height="1024"
+            onclick="canvasOnClick()"
+            style="
+              margin-bottom: 10px;
+              width: 80%;
+              height: 100%;
+              max-width: 256pt;
+              border: 5px solid white;
+              background-color: grey;
+            "
+          >
+          </canvas>
+          <div
+            class="row card"
+            style="padding-top: 20px; padding-left: 10px; padding-right: 10px"
+          >
+            <div class="input-field col s6">
+              <input id="nameInput" type="text" class="validate" />
+              <label class="need-translate josefin-sans" for="nameInput"
+                >full-name</label
+              >
             </div>
-            <a class="waves-effect waves-light btn-large z-depth-1-half "
-               onclick="generateOnClick()">
-                <span class="mdi mdi-sync mdi-24px left" style="margin-right: 10px"></span>
-                <t class="need-translate">gen</t>
-            </a>
+            <div class="input-field col s6">
+              <input
+                type="date"
+                id="birthdayInput"
+                value="2009-09-09"
+                name="birthday"
+              />
+              <label class="need-translate josefin-sans" for="birthdayInput"
+                >birthday</label
+              >
+            </div>
+          </div>
+          <a
+            class="waves-effect waves-light btn-large z-depth-1-half"
+            onclick="generateOnClick()"
+          >
+            <span
+              class="mdi mdi-sync mdi-24px left"
+              style="margin-right: 10px"
+            ></span>
+            <t class="need-translate">gen</t>
+          </a>
         </div>
-    </div>
-    <div class="card-panel outer-limit z-depth-1"
-         style="margin-left:auto; margin-right: auto; margin-top: 10px; max-width: 700px">
+      </div>
+      <div
+        class="card-panel outer-limit z-depth-1"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+          max-width: 700px;
+        "
+      >
         <h5 class="content-text">What is this?</h5>
-        <p class="content-text">It is an open source implementation of Quantum Wormhole, which generates a unique
-            pattern based on your name and birthday.</p>
+        <p class="content-text">
+          It is an open source implementation of Quantum Wormhole, which
+          generates a unique pattern based on your name and birthday.
+        </p>
         <h5 class="content-text">Is it safe?</h5>
-        <p class="content-text">All of your personal data is processed locally, you can check our implementation on
-            GitHub.</p>
+        <p class="content-text">
+          All of your personal data is processed locally, you can check our
+          implementation on GitHub.
+        </p>
         <h5 class="content-text">Is this an NFT?</h5>
-        <p>Learn more <a href="#" id="show-dialog" class="teal-text text-darken-2">here</a>.</p>
+        <p>
+          Learn more
+          <a href="#" id="show-dialog" class="teal-text text-darken-2">here</a>.
+        </p>
         <dialog class="mdl-dialog" style="width: 1000px">
-            <h4 class="mdl-dialog__title" style="font-size: 20pt">Is this an NFT?</h4>
-            <div class="mdl-dialog__content">
-                <p >
-                    No, it isn't. But you can purchase it if you want.
-                </p>
-                <p>Send any amount of ethereum to the following wallet, you will have the right to use Quantum
-                    Wormhole for all legal purpose, including but not limited to commercial use.</p>
-                <p class="content-text need-translate" style="word-wrap: break-word">eth-wallet</p>
-            </div>
-            <div class="mdl-dialog__actions">
-                <button type="button" class="btn waves-effect waves-light close ">ok</button>
-            </div>
+          <h4 class="mdl-dialog__title" style="font-size: 20pt">
+            Is this an NFT?
+          </h4>
+          <div class="mdl-dialog__content">
+            <p>No, it isn't. But you can purchase it if you want.</p>
+            <p>
+              Send any amount of ethereum to the following wallet, you will have
+              the right to use Quantum Wormhole for all legal purpose, including
+              but not limited to commercial use.
+            </p>
+            <p
+              class="content-text need-translate"
+              style="word-wrap: break-word"
+            >
+              eth-wallet
+            </p>
+          </div>
+          <div class="mdl-dialog__actions">
+            <button type="button" class="btn waves-effect waves-light close">
+              ok
+            </button>
+          </div>
         </dialog>
         <script>
-            var dialog = document.querySelector('dialog');
-            var showDialogButton = document.querySelector('#show-dialog');
-            if (!dialog.showModal) {
-                dialogPolyfill.registerDialog(dialog);
-            }
-            showDialogButton.addEventListener('click', function() {
-                dialog.showModal();
-            });
-            dialog.querySelector('.close').addEventListener('click', function() {
-                dialog.close();
-            });
+          var dialog = document.querySelector("dialog");
+          var showDialogButton = document.querySelector("#show-dialog");
+          if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+          }
+          showDialogButton.addEventListener("click", function () {
+            dialog.showModal();
+          });
+          dialog.querySelector(".close").addEventListener("click", function () {
+            dialog.close();
+          });
         </script>
-        <p class="content-text"> </p>
-
-    </div>
-    <div class="card-panel z-depth-1 blue-grey center"
-         style="max-width: 700px; margin: 10px auto 0;">
+        <p class="content-text"></p>
+      </div>
+      <div
+        class="card-panel z-depth-1 blue-grey center"
+        style="max-width: 700px; margin: 10px auto 0"
+      >
         <div class="container row" style="margin-bottom: 10px">
-            <a class="waves-effect waves-light btn-small social-btn"
-               href="https://github.com/AdhesionTek/Quantum-Wormhole" target="_blank">
-                <span class="mdi mdi-github"></span>
-                <t class="need-translate">view-on-github</t>
-            </a>
-            <a class="waves-effect waves-light btn-small social-btn" style="text-transform: none;"
-               href="https://github.com/AdhesionTek/Quantum-Wormhole/discussions" target="_blank">
-                <span class="mdi mdi-forum"></span>
-                <t class="need-translate">discussions</t>
-            </a>
-            <a class="waves-effect waves-light btn-small social-btn" style="text-transform: none;"
-               href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription" target="_blank">
-                <span class="mdi mdi-eye"></span>
-                <t class="need-translate">watch</t>
-            </a>
-            <a class="waves-effect waves-light btn-small social-btn" style="text-transform: none;"
-               href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription" target="_blank">
-                <span class="mdi mdi-star-outline"></span>
-                <t class="need-translate">star</t>
-            </a>
+          <a
+            class="waves-effect waves-light btn-small social-btn"
+            href="https://github.com/AdhesionTek/Quantum-Wormhole"
+            target="_blank"
+          >
+            <span class="mdi mdi-github"></span>
+            <t class="need-translate">view-on-github</t>
+          </a>
+          <a
+            class="waves-effect waves-light btn-small social-btn"
+            style="text-transform: none"
+            href="https://github.com/AdhesionTek/Quantum-Wormhole/discussions"
+            target="_blank"
+          >
+            <span class="mdi mdi-forum"></span>
+            <t class="need-translate">discussions</t>
+          </a>
+          <a
+            class="waves-effect waves-light btn-small social-btn"
+            style="text-transform: none"
+            href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription"
+            target="_blank"
+          >
+            <span class="mdi mdi-eye"></span>
+            <t class="need-translate">watch</t>
+          </a>
+          <a
+            class="waves-effect waves-light btn-small social-btn"
+            style="text-transform: none"
+            href="https://github.com/AdhesionTek/Quantum-Wormhole/subscription"
+            target="_blank"
+          >
+            <span class="mdi mdi-star-outline"></span>
+            <t class="need-translate">star</t>
+          </a>
         </div>
         <div class="container white-text center" style="margin-bottom: 0">
-            <t id="versionNumber">vn</t>
-            <t class="need-translate">bottom-texts</t>
+          <t id="versionNumber">vn</t>
+          <t class="need-translate">bottom-texts</t>
         </div>
+      </div>
     </div>
-</div>
-<script type="text/javascript" src="canvas.js"></script>
-<script type="text/javascript" src="index.js"></script>
-<!-- <script type="text/javascript" src="localization.js"></script> -->
+    <script type="text/javascript" src="canvas.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="localization.js"></script> -->
 
-<!-- JavaScript at end of body for optimized loading -->
-<script type="text/javascript" src="third-party/materialize/js/materialize.min.js"></script>
-
-</body>
-
+    <!-- JavaScript at end of body for optimized loading -->
+    <script
+      type="text/javascript"
+      src="third-party/materialize/js/materialize.min.js"
+    ></script>
+  </body>
 </html>
