@@ -1,6 +1,6 @@
 // @ts-check
 
-import { WormholeCanvas } from './canvas.mjs';
+import { WormholeCanvas } from "./canvas.mjs";
 
 export const VERSION = "1.1.4";
 
@@ -18,23 +18,29 @@ async function createServiceWorker() {
       console.error(e);
     }
   } else {
-    console.warn("Unable to create the service worker: No serviceWorker in navigator.");
+    console.warn(
+      "Unable to create the service worker: No serviceWorker in navigator."
+    );
   }
 }
 
 /**
  * Set the current version to every specified nodes.
- * @param {NodeListOf<HTMLElement>} elements 
+ * @param {NodeListOf<HTMLElement>} elements
  */
 function setVersion(elements) {
   elements.forEach((node) => {
     node.innerText = `v ${VERSION}`;
-  })
+  });
 }
 
 const qwCanvas = new WormholeCanvas();
-const nameInput = /** @type {HTMLInputElement} */ (document.getElementById("nameInput"));
-const birthInput = /** @type {HTMLInputElement} */ (document.getElementById("birthdayInput"));
+const nameInput = /** @type {HTMLInputElement} */ (
+  document.getElementById("nameInput")
+);
+const birthInput = /** @type {HTMLInputElement} */ (
+  document.getElementById("birthdayInput")
+);
 
 /**
  * The method that will be triggered when "submit" clicked.
@@ -42,7 +48,7 @@ const birthInput = /** @type {HTMLInputElement} */ (document.getElementById("bir
 function onGenerateSubmit() {
   // We have checked it in the form stage; thus,
   // we don't need to check it again.
-  const valueToHash = `${nameInput.value}${birthInput.valueAsNumber}`
+  const valueToHash = `${nameInput.value}${birthInput.valueAsNumber}`;
   const seed = getHash(valueToHash);
 
   qwCanvas.seed = seed;
@@ -50,7 +56,7 @@ function onGenerateSubmit() {
 
   for (const condRedirect of bundle) {
     if (condRedirect.condition(nameInput.value))
-      qwCanvas.ClickHref = condRedirect.redirectURL
+      qwCanvas.ClickHref = condRedirect.redirectURL;
   }
 }
 
@@ -61,32 +67,34 @@ function onGenerateSubmit() {
 const bundle = [
   // Thanks to GitHub Copliot! <3
   {
-    condition: (input) => input.toLowerCase() === "ybb" || input.includes("海子"),
-    redirectURL: "https://www.bilibili.com/video/BV1wo4y1X7Tk"
+    condition: (input) =>
+      input.toLowerCase() === "ybb" || input.includes("海子"),
+    redirectURL: "https://www.bilibili.com/video/BV1wo4y1X7Tk",
   },
   {
     condition: (input) => input.includes("罕见"),
-    redirectURL: "https://www.bilibili.com/video/BV1p64y1X7j2"
+    redirectURL: "https://www.bilibili.com/video/BV1p64y1X7j2",
   },
   {
     condition: (input) => input.includes("嘉心糖") || input.includes("嘉然"),
-    redirectURL: "https://www.bilibili.com/video/BV1FX4y1g7u8"
+    redirectURL: "https://www.bilibili.com/video/BV1FX4y1g7u8",
   },
   {
     condition: (input) => input.includes("何同学"),
-    redirectURL: "https://www.bilibili.com/video/BV1244y1p7kt"
+    redirectURL: "https://www.bilibili.com/video/BV1244y1p7kt",
   },
   {
     condition: (input) => !!input.toLowerCase().match("/(?:win|windows)11/g"),
-    redirectURL: "https://www.bilibili.com/video/BV1yb4y1x7Ky"
+    redirectURL: "https://www.bilibili.com/video/BV1yb4y1x7Ky",
   },
   {
-    condition: (input) => input.toLowerCase().includes("ceylan") || input.includes("锡兰"),
-    redirectURL: "https://www.youtube.com/user/CeylanLC/featured"
+    condition: (input) =>
+      input.toLowerCase().includes("ceylan") || input.includes("锡兰"),
+    redirectURL: "https://www.youtube.com/user/CeylanLC/featured",
   },
   {
     condition: (input) => input.toLowerCase() === "原版",
-    redirectURL: "https://youtu.be/pKKlGQtc_ss"
+    redirectURL: "https://youtu.be/pKKlGQtc_ss",
   },
 ];
 

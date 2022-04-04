@@ -12,14 +12,14 @@ const CURVE_NUMBER = 512;
 
 /**
  * The possible SRT types.
- * 
+ *
  * @readonly
  * @enum {string}
  */
 const SRT_TYPES = {
   Nothing: "NOTHING",
   Generated: "GENERATED",
-  Url: "URL"
+  Url: "URL",
 };
 
 export class WormholeCanvas {
@@ -27,7 +27,9 @@ export class WormholeCanvas {
    * @param {CSSSelector=} [selector="canvas"]
    */
   constructor(selector = "canvas") {
-    this.canvas = /** @type {HTMLCanvasElement} */ (document.querySelector(selector));
+    this.canvas = /** @type {HTMLCanvasElement} */ (
+      document.querySelector(selector)
+    );
     this.context2d = this.canvas.getContext("2d");
 
     this.seed = DEFAULT_SEED;
@@ -35,7 +37,7 @@ export class WormholeCanvas {
     this.clickHref = "";
 
     this.canvas.height = this.canvas.width * HEIGHT_RADIO;
-    this.canvas.addEventListener('click', this.onClick.bind(this));
+    this.canvas.addEventListener("click", this.onClick.bind(this));
   }
 
   /**
@@ -81,10 +83,10 @@ export class WormholeCanvas {
     const width = this.width;
     const context2d = this.context2d;
     const getRandomInt = this.getRandomInt;
-  
+
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
-  
+
     for (let i = 0; i < CURVE_NUMBER; i++) {
       context2d.strokeStyle = `rgb(
               ${Math.floor((255 * i) / CURVE_NUMBER)},
@@ -105,8 +107,8 @@ export class WormholeCanvas {
   }
 
   /**
-   * @param {[number, number?]} args 
-   * @returns 
+   * @param {[number, number?]} args
+   * @returns
    */
   getRandomInt(...args) {
     return getRandomInt(this.seed, ...args);
@@ -115,19 +117,18 @@ export class WormholeCanvas {
 
 /**
  * Get a random integer between min and max.
- * 
+ *
  * @param {number} seed
  * @param {number} max
  * @param {number=} [min=0]
  * @returns {number}
  */
-const getRandomInt = (seed, max, min = 0) => (
-  Math.floor(getRandomBase(seed) * max) + min
-);
+const getRandomInt = (seed, max, min = 0) =>
+  Math.floor(getRandomBase(seed) * max) + min;
 
 /**
  * Generate a random number based on the global {@link seed}.
- * 
+ *
  * @param {number} seed
  * @returns {number}
  */
@@ -138,11 +139,11 @@ const getRandomBase = (seed) => {
 
 /**
  * Play the audio, and rewind it in the end.
- * 
+ *
  * @param {string} src The audio URI.
  */
 const playAudioThenRewind = async (src) => {
   const sound = new Audio(src);
   await sound.play();
   sound.currentTime = 0;
-}
+};
