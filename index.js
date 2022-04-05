@@ -46,7 +46,7 @@ function generateOnClick() {
         if (nameInput.value==="原版") {
             canvasSrt="https://youtu.be/pKKlGQtc_ss";
         }
-        if (nameInput.value==="弹幕附") {
+        if (nameInput.value==="弹幕附"||nameInput.value==="弹幕付") {
             canvasSrt="https://youtu.be/jfTK-Om5wiY";
         }
     }
