@@ -11,7 +11,7 @@ if ("serviceWorker" in navigator) {
 }
 
 
-let version = "1.1.4"; // Version for index
+let version = "1.1.4.a"; // Version for index
 let versionView = document.getElementById("versionNumber");
 versionView.innerText = "v "+version
 
