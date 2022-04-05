@@ -2,7 +2,7 @@
 
 import { WormholeCanvas } from "./canvas.mjs";
 
-export const VERSION = "1.1.4";
+export const VERSION = "1.2.0";
 
 createServiceWorker();
 setVersion(document.querySelectorAll(".version"));

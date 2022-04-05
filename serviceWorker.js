@@ -1,5 +1,5 @@
 const staticQuantumWormhole = "quantum-wormhole-v1";
-const version = "1.1.4.a"; // Version for service worker
+const version = "1.2.0"; // Version for service worker
 
 const assets = [
   // Code Files
