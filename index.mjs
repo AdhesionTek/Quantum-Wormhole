@@ -99,6 +99,10 @@ const bundle = [
     condition: (input) => input.toLowerCase() === "原版",
     redirectURL: "https://youtu.be/pKKlGQtc_ss",
   },
+  {
+    condition: (input) => ["弹幕付", "弹幕附"].includes(input),
+    redirectURL: "https://youtu.be/jfTK-Om5wiY",
+  },
 ];
 
 /**
