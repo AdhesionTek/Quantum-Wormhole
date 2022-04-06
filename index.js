@@ -37,7 +37,7 @@ function generateOnClick() {
         if (nameInput.value.includes("何同学")) {
             canvasSrt="https://www.bilibili.com/video/BV1244y1p7kt";
         }
-        if (nameInput.value.toLowerCase().match("/(win|windows)11/g")) { // This code has bug
+        if (nameInput.value.toLowerCase().match(/(win|windows)11/g)) {
             canvasSrt="https://www.bilibili.com/video/BV1yb4y1x7Ky";
         }
         if (nameInput.value.toLowerCase().includes("ceylan") || nameInput.value.includes("锡兰")) {
