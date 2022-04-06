@@ -87,7 +87,7 @@ const bundle = [
     redirectURL: "https://www.bilibili.com/video/BV1244y1p7kt",
   },
   {
-    condition: (input) => !!input.toLowerCase().match("/(?:win|windows)11/g"),
+    condition: (input) => !!input.toLowerCase().match(/(?:win|windows)11/g),
     redirectURL: "https://www.bilibili.com/video/BV1yb4y1x7Ky",
   },
   {
