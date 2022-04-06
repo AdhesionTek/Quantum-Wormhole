@@ -1,6 +1,6 @@
 {
   "name": "quantum-wormhole",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A free & open source implementation of Ocean Peace Quantum Wormhole with added features including 热水器.",
   "main": "index.js",
   "scripts": {
