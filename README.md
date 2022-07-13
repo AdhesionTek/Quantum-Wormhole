@@ -15,12 +15,12 @@
 
 AdhesionTek Quantum Wormhole (ATQW) is a free open source implementation of [Ocean Peace Quantum Wormhole](https://en.oceanpeace.com.cn/static/product-detail.html) with added features including 热水器.
 
-## Try it now!
+## Wanna try it?
 
 - Online: [Link](http://quantumwormhole.adhesiontek.com/)
 - Install: This is a PWA.
 - Downloads: [Releases](https://github.com/AdhesionTek/Quantum-Wormhole/releases)
 
-## Wanna learn more?
+## Learn more?
 
 Check out our [wiki](https://github.com/AdhesionTek/Quantum-Wormhole/wiki).
