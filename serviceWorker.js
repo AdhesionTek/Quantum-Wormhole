@@ -29,14 +29,21 @@ const assets = [
   "/locales/zh-TW/translation.json",
 ];
 
-self.addEventListener("install", (installEvent) => {
-  //console.log("Installing...");
-  installEvent.waitUntil(
-    caches.open(staticQuantumWormhole).then((cache) => {
-      return cache.addAll(assets);
-    })
-  );
-});
+self.addEventListener("install", (event) => {
+  console.log("Installing...")
+  event.waitUntil(
+      
+      (async() => {
+          try {
+              cache_obj = await caches.open(cache)
+              cache_obj.addAll(caching_files)
+          }
+          catch{
+              console.log("error occured while caching...")
+          }
+      })()
+  )
+} )
 
 self.addEventListener("fetch", (fetchEvent) => {
   //console.log("Intercepting fetching request for: "+fetchEvent.request.url);
