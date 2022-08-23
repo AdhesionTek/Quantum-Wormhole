@@ -7,6 +7,9 @@
 const DEFAULT_SEED = 1;
 const HEIGHT_RADIO = 1;
 const CURVE_NUMBER = 512;
+const colorInput = /** @type {HTMLInputElement} */ (
+    document.getElementById("ColorInput")
+);
 
 /** @typedef {string} CSSSelector A valid CSS Selector. */
 
@@ -48,7 +51,8 @@ export class WormholeCanvas {
     this.canvasSrt = SRT_TYPES.Url;
   }
 
-  paint() {
+  paint(RGB) {
+    this.RGB=RGB;
     this.statelessPaint();
     this.canvasSrt = SRT_TYPES.Generated;
   }
@@ -88,9 +92,9 @@ export class WormholeCanvas {
 
     for (let i = 0; i < CURVE_NUMBER; i++) {
       context2d.strokeStyle = `rgb(
-              ${Math.floor((255 * i) / CURVE_NUMBER)},
-              ${Math.floor((255 * i) / CURVE_NUMBER)},
-              ${Math.floor((255 * i) / CURVE_NUMBER)})`;
+              ${Math.floor((`${colorInput.value}`.toRGB()[0] * i) / CURVE_NUMBER)},
+              ${Math.floor((`${colorInput.value}`.toRGB()[1] * i) / CURVE_NUMBER)},
+              ${Math.floor((`${colorInput.value}`.toRGB()[2] * i) / CURVE_NUMBER)})`;
       context2d.beginPath();
       context2d.moveTo(this.getRandomInt(width), this.getRandomInt(height));
       context2d.bezierCurveTo(
@@ -127,6 +131,15 @@ export class WormholeCanvas {
  */
 const getRandomInt = (seed, max, min = 0) =>
   Math.floor(getRandomBase(seed) * max) + min;
+
+String.prototype.toRGB = function(){
+  let Hex = this.split("#")[1].match(/.{1,2}/g);
+  return [
+    parseInt(Hex[0], 16),
+    parseInt(Hex[1], 16),
+    parseInt(Hex[2], 16)
+  ];
+}
 
 /**
  * Generate a random number based on the global {@link seed}.

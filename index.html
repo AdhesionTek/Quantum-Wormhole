@@ -87,8 +87,8 @@
     </style>
 
     <script defer type="module">
-      import "/index.mjs";
-      import "/locales/index.mjs";
+      import "./index.mjs";
+      import "./locales/index.mjs";
     </script>
     <script defer src="third-party/materialize/js/materialize.min.js"></script>
   </head>
@@ -147,6 +147,18 @@
                 />
                 <label class="need-translate josefin-sans" for="birthdayInput"
                   >birthday</label
+                >
+              </div>
+              <div class="input-field col s6">
+                <input
+                  type="color"
+                  id="ColorInput"
+                  value="#ffffff"
+                  name="color"
+                  required
+                />
+                <label class="need-translate josefin-sans" for="ColorInput"
+                  >color</label
                 >
               </div>
             </div>
