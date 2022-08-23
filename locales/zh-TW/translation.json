@@ -1,5 +1,5 @@
 {
-  "gen1": "產生",
+  "gen1": "生產",
   "quantum-wormhole": "量子蟲洞",
   "full-name": "姓名",
   "birthday": "生日",
@@ -9,5 +9,14 @@
   "view-on-github": "在 GitHub 上查看",
   "star": "給星星",
   "bottom-texts": "黏連科技用❤️製作 Copyleft 2022",
-  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd"
+  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd",
+  "what-is-this": "這是什麽?",
+  "introduce": "這是一個開源的量子蟲洞, 它會根據您的名字和生日生成一個獨特的量子蟲洞.",
+  "is-safe": "這安全嗎?",
+  "security-description": "您的所有個人數據將在都在本地處理, 您可以在 GitHub 上查看我們是如何履行的.",
+  "is-nft": "這是 NFT 嗎?",
+  "nft-learn-more": "請在此處查看",
+  "here": "詳情",
+  "is-nft-p1": "它不是 NFT, 但如果您願意, 您可以購買它.",
+  "is-nft-p2": "往下面的錢包發送任意數量的以太坊, 您就可以合法地將量子蟲洞用於所有合法目的, 包括但不限於商業用途."
 }

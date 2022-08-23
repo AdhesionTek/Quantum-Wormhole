@@ -9,5 +9,15 @@
   "view-on-github": "View On GitHub",
   "star": "Star",
   "bottom-texts": "Made with ❤️ by AdhesionTek. Copyleft 2022.",
-  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd"
+  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd",
+  "what-is-this": "What is this?",
+  "introduce": "It is an open source implementation of Quantum Wormhole, which generates a unique pattern based on your name and birthday.",
+  "is-safe": "Is it safe?",
+  "security-description": "All of your personal data is processed locally, you can check our implementation on GitHub.",
+  "is-nft": "Is this an NFT?",
+  "nft-learn-more": "Learn more",
+  "here": " here ",
+  "is-nft-p1": "No, it isn't. But you can purchase it if you want.",
+  "is-nft-p2": "Send any amount of ethereum to the following wallet, you will have the right to use Quantum Wormhole for all legal purpose, including but not limited to commercial use.",
+  "ok": "OK"
 }
