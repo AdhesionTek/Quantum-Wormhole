@@ -1,6 +1,6 @@
 // @ts-check
 
-import { WormholeCanvas } from "./canvas.mjs";
+import {WormholeCanvas} from "./canvas.mjs";
 
 export const VERSION = "1.2.0";
 
@@ -45,6 +45,7 @@ const birthInput = /** @type {HTMLInputElement} */ (
   document.getElementById("birthdayInput")
 );
 
+
 /**
  * The method that will be triggered when "generate" clicked.
  */
@@ -52,9 +53,8 @@ function onSubmit() {
   // We have checked it in the form stage; thus,
   // we don't need to check it again.
   const valueToHash = `${nameInput.value}${birthInput.valueAsNumber}`;
-  const seed = getHash(valueToHash);
 
-  qwCanvas.seed = seed;
+  qwCanvas.seed = getHash(valueToHash);
   qwCanvas.paint();
 
   for (const condRedirect of bundle) {
@@ -68,7 +68,7 @@ function onSubmit() {
 
 /** @type { ConditionalRedirectBundle } */
 const bundle = [
-  // Thanks to GitHub Copliot! <3
+  // Thanks to GitHub Copilot! <3
   {
     condition: (input) =>
       input.toLowerCase() === "ybb" || input.includes("海子"),

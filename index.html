@@ -87,8 +87,8 @@
     </style>
 
     <script defer type="module">
-      import "/index.mjs";
-      import "/locales/index.mjs";
+      import "./index.mjs";
+      import "./locales/index.mjs";
     </script>
     <script defer src="third-party/materialize/js/materialize.min.js"></script>
   </head>
@@ -149,6 +149,18 @@
                   >birthday</label
                 >
               </div>
+              <div class="input-field col s6">
+                <input
+                  type="color"
+                  id="ColorInput"
+                  value="#ffffff"
+                  name="color"
+                  required
+                />
+                <label class="need-translate josefin-sans" for="ColorInput"
+                  >color</label
+                >
+              </div>
             </div>
             <button
               id="generate-btn"
@@ -173,31 +185,26 @@
           max-width: 700px;
         "
       >
-        <h5 class="content-text">What is this?</h5>
-        <p class="content-text">
-          It is an open source implementation of Quantum Wormhole, which
-          generates a unique pattern based on your name and birthday.
+        <h5 class="content-text need-translate">what-is-this</h5>
+        <p class="content-text need-translate">
+			    introduce
         </p>
-        <h5 class="content-text">Is it safe?</h5>
-        <p class="content-text">
-          All of your personal data is processed locally, you can check our
-          implementation on GitHub.
+        <h5 class="content-text need-translate">is-safe</h5>
+        <p class="content-text need-translate">
+			    security-description
         </p>
-        <h5 class="content-text">Is this an NFT?</h5>
+        <h5 class="content-text need-translate">is-nft</h5>
         <p>
-          Learn more
-          <a href="#" id="show-dialog" class="teal-text text-darken-2">here</a>.
+          <span>nft-learn-more</span><a href="#" id="show-dialog" class="teal-text text-darken-2">here</a>.
         </p>
         <dialog class="mdl-dialog" style="width: 1000px">
-          <h4 class="mdl-dialog__title" style="font-size: 20pt">
-            Is this an NFT?
+          <h4 class="mdl-dialog__title need-translate" style="font-size: 20pt">
+            is-nft
           </h4>
-          <div class="mdl-dialog__content">
-            <p>No, it isn't. But you can purchase it if you want.</p>
+          <div class="mdl-dialog__content need-translate">
+            <p>is-nft-p1</p>
             <p>
-              Send any amount of ethereum to the following wallet, you will have
-              the right to use Quantum Wormhole for all legal purpose, including
-              but not limited to commercial use.
+              is-nft-p2
             </p>
             <p
               class="content-text need-translate"
@@ -207,7 +214,7 @@
             </p>
           </div>
           <div class="mdl-dialog__actions">
-            <button type="button" class="btn waves-effect waves-light close">
+            <button type="button" class="btn waves-effect waves-light close need-translate">
               ok
             </button>
           </div>
@@ -269,7 +276,7 @@
           </a>
         </div>
         <div class="container white-text center" style="margin-bottom: 0">
-          <t id="versionNumber">1.1.4.b</t>
+          <t id="versionNumber">1.1.5.b</t>
           <t class="need-translate">bottom-texts</t>
         </div>
       </div>

@@ -3,10 +3,21 @@
   "quantum-wormhole": "量子虫洞",
   "full-name": "姓名",
   "birthday": "生日",
+  "color": "颜色",
   "watch": "视监",
   "discussions": "讨论",
   "view-on-github": "在Github上查看",
   "star": "给星星",
   "bottom-texts": "粘连科技用❤️制作 Copyleft 2022",
-  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd"
+  "eth-wallet": "ETH: 0xb48fD1DF1A76e17b40d212dca73C647eCbd908Cd",
+  "what-is-this": "这是什么?",
+  "introduce": "这是一个开源的量子虫洞, 它会根据您的名字和生日生成一个独特的量子虫洞.",
+  "is-safe": "这安全吗?",
+  "security-description": "您的所有个人数据将在都在本地处理, 您可以在 GitHub 上查看我们是如何履行的.",
+  "is-nft": "这是 NFT 吗?",
+  "nft-learn-more": "请在此处查看",
+  "here": "详情",
+  "is-nft-p1": "它不是 NFT, 但如果您愿意, 您可以购买它.",
+  "is-nft-p2": "往下面的钱包发送任意数量的以太坊, 您就可以合法地将量子虫洞用于所有合法目的, 包括但不限于商业用途.",
+  "ok": "好"
 }
