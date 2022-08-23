@@ -51,8 +51,7 @@ export class WormholeCanvas {
     this.canvasSrt = SRT_TYPES.Url;
   }
 
-  paint(RGB) {
-    this.RGB=RGB;
+  paint() {
     this.statelessPaint();
     this.canvasSrt = SRT_TYPES.Generated;
   }

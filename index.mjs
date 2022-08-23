@@ -68,7 +68,7 @@ function onSubmit() {
 
 /** @type { ConditionalRedirectBundle } */
 const bundle = [
-  // Thanks to GitHub Copliot! <3
+  // Thanks to GitHub Copilot! <3
   {
     condition: (input) =>
       input.toLowerCase() === "ybb" || input.includes("海子"),
