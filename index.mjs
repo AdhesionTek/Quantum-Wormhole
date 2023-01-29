@@ -44,6 +44,9 @@ const nameInput = /** @type {HTMLInputElement} */ (
 const birthInput = /** @type {HTMLInputElement} */ (
   document.getElementById("birthdayInput")
 );
+const colorInput = /** @type {HTMLInputElement} */ (
+  document.getElementById("colorInput")
+);
 
 /**
  * The method that will be triggered when "generate" clicked.
@@ -55,6 +58,7 @@ function onSubmit() {
   const seed = getHash(valueToHash);
 
   qwCanvas.seed = seed;
+  qwCanvas.RGB = colorInput.value.toRGB();
   qwCanvas.paint();
 
   for (const condRedirect of bundle) {
@@ -121,4 +125,17 @@ function getHash(input) {
     hash |= 0; // Convert to 32bit integer
   }
   return hash;
+}
+
+/**
+ * @returns {number[]}
+ */
+String.prototype.toRGB = function(){
+  var aRgbHex = this.slice(1).match(/.{1,2}/g);
+  var RGBArray = [
+    parseInt(aRgbHex[0], 16),
+    parseInt(aRgbHex[1], 16),
+    parseInt(aRgbHex[2], 16)
+  ];
+  return RGBArray;
 }
