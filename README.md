@@ -17,7 +17,7 @@ AdhesionTek Quantum Wormhole (ATQW) is a free open source implementation of [Oce
 
 ## Wanna try it?
 
-- Online: [Link](https://qw.adhesiontek.com/)
+- Online: [Link](https://adhesiontek.github.io/Quantum-Wormhole/)
 - Offline: PWA is broken, and I don't want to fix it.
 - Downloads: [Releases](https://github.com/AdhesionTek/Quantum-Wormhole/releases)
 
