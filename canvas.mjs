@@ -7,6 +7,7 @@
 const DEFAULT_SEED = 1;
 const HEIGHT_RADIO = 1;
 const CURVE_NUMBER = 512;
+const DEFAULT_RGB = [255, 255, 255]
 
 /** @typedef {string} CSSSelector A valid CSS Selector. */
 
@@ -33,6 +34,7 @@ export class WormholeCanvas {
     this.context2d = this.canvas.getContext("2d");
 
     this.seed = DEFAULT_SEED;
+    this.RGB = DEFAULT_RGB;
     this.canvasSrt = SRT_TYPES.Nothing;
     this.clickHref = "";
 
@@ -81,16 +83,17 @@ export class WormholeCanvas {
   statelessPaint() {
     const height = this.height;
     const width = this.width;
-    const context2d = this.context2d;
+    const context2d = this.context2d
+    const RGB = this.RGB;
 
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
 
     for (let i = 0; i < CURVE_NUMBER; i++) {
       context2d.strokeStyle = `rgb(
-              ${Math.floor((255 * i) / CURVE_NUMBER)},
-              ${Math.floor((255 * i) / CURVE_NUMBER)},
-              ${Math.floor((255 * i) / CURVE_NUMBER)})`;
+              ${Math.floor((RGB[0] * i) / CURVE_NUMBER)},
+              ${Math.floor((RGB[1] * i) / CURVE_NUMBER)},
+              ${Math.floor((RGB[2] * i) / CURVE_NUMBER)})`;
       context2d.beginPath();
       context2d.moveTo(this.getRandomInt(width), this.getRandomInt(height));
       context2d.bezierCurveTo(
